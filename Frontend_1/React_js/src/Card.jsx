@@ -1,13 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const Card = () => {
+const Card = (props) => {
   return (
-    <div> 
-    <img src={props.imageUrl} alt="thumbnail"/>
-    <h1>{props.title}</h1>
-    <p>{props.description}</p>
-    </div>
-  )
-}
+    <div className="flex flex-col items-center justify-center border px-4 py-2 space-y-5 m-4 rounded-xl bg-white shadow-2xl">
 
-export default Card
+      <img src={props.imageUrl} alt="thumbnail"  className='border rounded-xl' height={420} width={420}/>
+
+      <h1 className="text-2xl font-bold self-start">{props.title}</h1>
+      <p className="text-basefont-semibold text-gray-500">{props.description}</p>
+    </div>
+  );
+};
+
+export default Card;
