@@ -25,7 +25,9 @@ return (
       <p className="text-white mt-8 text-xl">Loading...</p>
     ) : (
       <>
-        <Avatar imageUrl={data.avatar_url} Name={data.name} />
+        <Avatar imageUrl=
+        {data.avatar_url}
+        Name={data.name} />
         <div className="grid grid-cols-3 gap-4 w-full max-w-2xl mt-6">
           <InfoCard count={data.followers} title={"Followers"} />
           <InfoCard count={data.following} title={"Following"} />
