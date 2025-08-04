@@ -245,3 +245,28 @@ console.log(status); // SUCCESS
 | Type Alias              | `type Name = ...`         | Reuse & simplify complex types           |
 | Function Types          | `(a: T, b: T) => T`       | Describe function structure as a type    |
 | Enums                   | `enum`                    | Named constants for fixed values         |
+
+
+
+### In TypeScript, the ?? operator is called the Nullish Coalescing Operator.
+
+### ✅ What it does:
+The ?? operator returns the right-hand side value only if the left-hand side is null or undefined.
+
+It is used to provide a default value only when the variable is nullish (i.e., null or undefined), not when it's a falsy value like 0, false, or "".
+
+#### ✅ Syntax:
+```
+let result = value ?? defaultValue;
+```
+If value is null or undefined, result will be defaultValue.
+
+Otherwise, result will be value.
+
+### ✅ Example 1:
+```
+let name: string | null = null;
+let displayName = name ?? "Guest";
+
+console.log(displayName); // Output: Guest
+```
