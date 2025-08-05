@@ -2,9 +2,40 @@
 ## 🧠 1. **Functions in TypeScript**
 
 Functions are the building blocks of TypeScript. You can define:
+###  ✅ What is Type Annotation in TypeScript?
+Type Annotation is the way we explicitly tell TypeScript what type a variable, function parameter, or return value should have.
+
+### 💡 Why Use Type Annotations?
+To prevent bugs by catching type errors early.
+
+To improve code clarity and readability.
+
+To get better autocomplete and hints from editors like VS Code.
+📌 Syntax:
+```
+let variableName: Type = value;
+```
+
+#### 🧾 Examples of Type Annotations:
+🔹 1. Variable
+```
+let age: number = 25;
+let name: string = "Sneha";
+let isAdmin: boolean = false;
+```
+# ✅ Type Inference vs Type Annotation
+
+| Feature           | Type Inference                          | Type Annotation                          |
+|-------------------|------------------------------------------|-------------------------------------------|
+| **Who decides type?** | TypeScript guesses automatically       | You manually specify the type             |
+| **Example**          | `let x = 10;`                           | `let x: number = 10;`                     |
+| **Use case**         | Good for simple cases                  | Preferred when clarity or precision needed |
+
+
 
 * **Parameter types** to ensure correct input
 * **Return types** to ensure correct output
+
 
 ### 🧪 Example 1: Named Function
 
@@ -58,6 +89,16 @@ Trying to assign a different type will throw an error:
 
 ## 🧠 3. **Optional & Default Parameters**
 
+### ❓ Do we always need to use ? for optional parameters in TypeScript?
+👉 Yes, in TypeScript, when you want to make a function parameter optional, you must use the ? syntax.
+
+**✅ Syntax:**
+```
+function myFunction(param1: string, param2?: number): void {
+  // param2 is optional
+}
+```
+
 ### ✅ Optional Parameters
 
 Use `?` after the parameter name to make it optional.
@@ -94,6 +135,14 @@ console.log(multiply(5, 3));      // 15
 
 ## 🧠 4. **Arrays in TypeScript**
 
+#### ✅ Valid Array Declarations in TypeScript:
+
+let arr1: number[] = [1, 2, 3];           // ✅ shorthand syntax
+
+let arr2: Array<number> = [4, 5, 6];      // ✅ generic syntax
+
+let arr3: number[] = new Array<number>(3); // ✅ constructor + type
+
 ### ✅ 1. Basic Declaration
 
 ```ts
@@ -110,11 +159,55 @@ arr[1] = 20;
 arr[2] = 30;
 ```
 
+## ✅Show me how to create an array using a constructor in JavaScript and TypeScript, and also explain the difference between JavaScript and TypeScript.
+
+#### ✅ 1. Array using Constructor in JavaScript
+```
+// JavaScript
+let arr = new Array(3); // Creates an array with length 3
+arr[0] = 10;
+arr[1] = 20;
+arr[2] = 30;
+console.log(arr); // Output: [10, 20, 30]
+```
+**JavaScript is dynamically typed, so you don't specify the type of elements.**
+
+You can mix types:
+
+```
+let arr = new Array(3);
+arr[0] = 10;
+arr[1] = "hello";
+arr[2] = true;
+```
+
+
+#### ✅ 2. Array using Constructor in TypeScript
+```
+// TypeScript
+let arr = new Array<number>(3); // Creates a number array of length 3
+arr[0] = 10;
+arr[1] = 20;
+arr[2] = 30;
+console.log(arr); // Output: [10, 20, 30]
+```
+
+**TypeScript is statically typed, so you define the type using <number> or : number[].**
+
 ### ✅ 3. Using `Array.of()`
 
 ```ts
-let arr2 = Array.of(1, 2, 3, 4);
-console.log(arr2); // [1, 2, 3, 4]
+let arr: number[] = Array.of(10, 20, 30); // [10, 20, 30]
+let names: string[] = Array.of("Megha", "Sneha");
+
+console.log(arr);    // Output: [10, 20, 30]
+console.log(names);  // Output: ["Megha", "Sneha"]
+
+```
+You can also use TypeScript’s generic syntax:
+
+```
+let arr = Array.of<number>(1, 2, 3); // ✅ type inferred as number[]
 ```
 
 🔍 You can also do `Array<string>` if you prefer generic syntax.
@@ -122,6 +215,16 @@ console.log(arr2); // [1, 2, 3, 4]
 ---
 
 ## 🧠 5. **Objects in TypeScript**
+
+An object in TypeScript is a collection of key-value pairs, where the keys are strings (or symbols), and the values can be of any specified type.
+
+Unlike JavaScript, TypeScript allows you to define types for the shape (structure) of an object using:
+
+▫️ Inline types
+
+▫️Type aliases
+
+▫️Interfaces
 
 TypeScript lets you **define object structure explicitly**.
 
@@ -176,6 +279,11 @@ const u1: User = {
 
 You can define **types for functions** using a `type`.
 
+defines the parameter types and return type of a function. This is especially useful when:
+
+▫️You want to define a variable that holds a function.
+
+▫️You want to enforce that a function follows a specific signature (structure).
 ### ✅ Example
 
 ```ts
@@ -198,6 +306,7 @@ This ensures that any function using `MathOperation`:
 ## 🧠 8. **Enums in TypeScript**
 
 Enums represent **a fixed set of named constants**.
+By default, enums start from 0 and increment by 1.
 
 ### ✅ Numeric Enum (default)
 
