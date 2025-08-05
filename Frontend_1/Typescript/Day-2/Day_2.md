@@ -357,7 +357,7 @@ console.log(status); // SUCCESS
 
 
 
-### In TypeScript, the ?? operator is called the Nullish Coalescing Operator.
+### 👉🏻In TypeScript, the ?? operator is called the Nullish Coalescing Operator.
 
 ### ✅ What it does:
 The ?? operator returns the right-hand side value only if the left-hand side is null or undefined.
