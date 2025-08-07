@@ -2,29 +2,27 @@ import React, {useState,useEffect } from "react";
 import Avatar from "./module/Profile/components/Avatar";
 import InfoCard from "./module/Profile/components/InfoCard";
 
+const htmlDarkClassName=document.getElementById("mainRoot").classList[0];
 const App = () => {
-  const [Marks,setMarks]=useState(99);
-  const htmlDarkClassName=document.getElementById("mainRoot").classList;
+  const [Marks,setMarks]=useState(0);
+  const [theme,setTheme]=useState(htmlDarkClassName) ;
 
-const onIncrement=()=>{
-  setMarks (Marks+1)
-}
-const onDecrement=()=>{
-  setMarks(Marks-1)
-}
+  const onToggleTheme=()=>{
+    setTheme(theme==="dark"?"light" :"dark");
+    document.getElementById("mainRoot").classList.toggle("dark");
+  }
 return (
-  <main className="bg-zinc-900 dark:bg-amber-50 w-full py-24 flex flex-col justify-start items-center min-h-screen h-full">
+  <main className=" bg-amber-50 dark:bg-zinc-900 w-full py-24 flex flex-col justify-start items-center min-h-screen h-full">
     <h1 className="text-5xl text-yellow-500 font-extrabold stroke-2">
       ♥️ Welcome Your Github Profile ♥️
     </h1>
-
-
+:
 <div className="flex flex-row gap-3 justify-center items-center py-24">
-<button onClick={onIncrement} className="px-4 py-2 bg-emerald-400 text-white text-3xl rounded-md">+</button>
-
-<span className="px-4 py-2 bg-zinc-900 text-white text-3xl">{Marks}</span>
-{Marks}
-<button onClick={onDecrement} className="px-5 py-2 bg-red-500 text-white text-3xl rounded-md">-</button>
+<button onClick={onToggleTheme} className="hover:cursor-pointer px-4 py-4 h-20 w-20 rounded-full border border-zinc-500 text-3xl"> 
+{
+ theme==="dark" ? "☀️" :"🌙"
+}
+ </button>
 </div>
 
     {/* {!data ? (
@@ -49,7 +47,15 @@ return (
 export default App;
 
 // usestate by increment decrement 
-{/* <div className="flex flex-row gap-3 justify-center items-center py-24">
+{/* 
+  const onIncrement=()=>{
+  setMarks (Marks+1)
+}
+const onDecrement=()=>{
+  setMarks(Marks-1)
+}
+  
+  <div className="flex flex-row gap-3 justify-center items-center py-24">
 <button onClick={onIncrement} className="px-4 py-2 bg-emerald-400 text-white text-3xl rounded-md">+</button>
 
 <span className="px-4 py-2 bg-zinc-900 text-white text-3xl">{Marks}</span>
