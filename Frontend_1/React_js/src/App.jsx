@@ -3,25 +3,15 @@ import Avatar from "./module/Profile/components/Avatar";
 import InfoCard from "./module/Profile/components/InfoCard";
 
 const App = () => {
-  const [data,setData]=useState(null);
-  useEffect(()=>{
-  async  function fetchUserDetails(username){
-    const res=await fetch(`https://api.github.com/users/${username}`);
-    const profileData=await res.json();
-    setData(profileData);
-  }
-  fetchUserDetails("codermeghagithub")
-  },[]);
-
-  console.log(data);
-
+  
+  let Marks=99;
 return (
   <main className="bg-zinc-900 w-full py-24 flex flex-col justify-start items-center min-h-screen h-full">
     <h1 className="text-5xl text-yellow-500 font-extrabold stroke-2">
       ♥️ Welcome Your Github Profile ♥️
     </h1>
 
-    {!data ? (
+    {/* {!data ? (
       <p className="text-white mt-8 text-xl">Loading...</p>
     ) : (
       <>
@@ -34,7 +24,8 @@ return (
           <InfoCard count={data.public_repos} title={"Repositories"} />
         </div>
       </>
-    )}
+    )} */}
+
   </main>
 );
 };

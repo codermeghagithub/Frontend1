@@ -53,6 +53,20 @@ usestate
 memorize 
 
 
+## Some hooks rules.
+✅ Hooks must be used inside functional components or custom hooks.
+Hooks cannot be used inside regular JavaScript functions or class components.
+
+✅ Hooks should be called at the top level of a component or custom hook, not inside loops, conditions, or nested functions.
+
+✅ Hooks must be used inside functional components or custom hooks.
+Hooks cannot be used inside regular JavaScript functions or class components.
+
+✅ Custom Hooks must start with use.
+This is how React knows it's a Hook and applies its rules.
+(e.g. useState, useEffect,useMemo, useMyCustomHook)
+
+
 
 
 
