@@ -5,12 +5,14 @@ import InfoCard from "./module/Profile/components/InfoCard";
 const App = () => {
   
   let Marks=99;
+
 return (
   <main className="bg-zinc-900 w-full py-24 flex flex-col justify-start items-center min-h-screen h-full">
     <h1 className="text-5xl text-yellow-500 font-extrabold stroke-2">
       ♥️ Welcome Your Github Profile ♥️
     </h1>
 
+<div></div>
     {/* {!data ? (
       <p className="text-white mt-8 text-xl">Loading...</p>
     ) : (
