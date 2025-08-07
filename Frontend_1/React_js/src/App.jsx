@@ -3,16 +3,26 @@ import Avatar from "./module/Profile/components/Avatar";
 import InfoCard from "./module/Profile/components/InfoCard";
 
 const App = () => {
+  const [MArks,setMarks]=useState(0);
   
-  let Marks=99;
 
+  let Marks=99;
+onIncrement=()=>{}
+onDecrement=()=>{}
 return (
   <main className="bg-zinc-900 w-full py-24 flex flex-col justify-start items-center min-h-screen h-full">
     <h1 className="text-5xl text-yellow-500 font-extrabold stroke-2">
       ♥️ Welcome Your Github Profile ♥️
     </h1>
 
-<div></div>
+
+<div className="flex flex-row gap-3 justify-center items-center py-24"> 
+<button onClick={()=>{Marks=Marks+1}} className="px-4 py-2 bg-emerald-400 text-white text-3xl rounded-md">+</button>
+<span className="px-4 py-2 bg-zink-900 text-white text-3xl">{Marks}</span>
+{Marks}
+<button onClick={()=>{Marks=Marks+1}} className="px-5 py-2 bg-red-500 text-white text-3xl rounded-md">-</button>
+</div>
+
     {/* {!data ? (
       <p className="text-white mt-8 text-xl">Loading...</p>
     ) : (
