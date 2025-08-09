@@ -9,6 +9,8 @@ const App = () => {
   const [username, setUsername] = useState("");
   const [isPending, setIsPending] = useState(false);
   const [data, setData] = useState(null);
+  const [isFollowingPending,setFollowingPending]=useState([])
+  const[following,setFollowing]=useState([]);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -32,6 +34,28 @@ const App = () => {
     }
   };
 
+
+  const onFetchFollowing=async(e)=>{
+    e.preventDefault();
+    try {
+      setIsPending(true);
+      const res = await fetch(`https://api.github.com/users/${username}/following`);
+
+      if (!res.ok) {
+        toast.error("Following not found");
+        setData(null);
+        return;
+      }
+
+      const userData = await res.json();
+      setFollowing(userData);
+      toast.success("Following members are found");
+    } catch (error) {
+      toast.error("Something went wrong");
+    } finally {
+      setIsPending(false);
+    }
+  }
 console.log(data);
 
   return (
@@ -86,17 +110,33 @@ console.log(data);
         title={"No user Found"}
         description={"Please enter a valid username"}/>):
         (
-<div className="text-center">
+<div className="flex flex-col justify-center items-center w-full space-y-5">
         <Avatar imageUrl={data.avatar_url} Name={data.name} />
         <div className="grid grid-cols-3 gap-4 w-full max-w-2xl mt-6">
           <InfoCard count={data.followers} title={"Followers"} />
           <InfoCard count={data.following} title={"Following"} />
           <InfoCard count={data.public_repos} title={"Repositories"} />
         </div>
+
+        <button
+        onClick={onFetchFollowing}
+         className="px-4 py-4 rounded-md bg-emerald-400 hover:bg-emerald-500 font-semibold text-white">
+          Fetch Following
+        </button>
+        <div className="grid grid-cols-4 gap-4 w-full max-w-4xl">
+        {
+           following &&(
+            following.map((following,index)=>(
+              <Avatar key={index} imageUrl={following.avatar_url} Name={following.login} htmlFor={following.html_url}/>
+            ) ))
+        }
+
+        </div>
         </div>
         )}
         </div>
+       
         );
-      }
+      };
     
 export default App;
