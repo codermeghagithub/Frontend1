@@ -1,5 +1,18 @@
 ## what is hooks
+Hooks are special functions in React that let you use state and other React features inside functional components without writing a class.
 
+Common Hooks
+useState → For storing and updating state.
+
+useEffect → For side effects (API calls, timers, event listeners).
+
+useContext → For using context values.
+
+useRef → For referencing DOM elements or persisting values between renders without causing re-render.
+
+useReducer → For more complex state logic.
+
+Custom Hooks → Your own hook functions.
 ## Why react ?
 It's because those are normal variables and React.js doesn't know that it's going to be changed.
 And that react should respond or update DOM based on that.
