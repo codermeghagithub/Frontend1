@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { App } from "./App.jsx";
-import { State } from "./components/hooks/State.jsx";
+import { State } from "./components/hooks/Use_State.jsx";
 // import Profile from "./components/Profile.jsx";
 // import { Practices } from "./Practices.jsx";
 // import "./index.css";
-
+import "./Style.css";
 
 
 
