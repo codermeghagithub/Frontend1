@@ -261,3 +261,8 @@ console.log(swap("frontend", 101)); // [101, "frontend"]
 
 
 ## What is the diff between argument and parameter 
+
+
+
+##  Call signature
+**The function call signature refer  to the declaration or defination of a function , which includes the function's name parameter and return type . it defines the structure and type information of a function without including the functions implementation or body**
