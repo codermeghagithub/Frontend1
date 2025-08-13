@@ -48,6 +48,7 @@ function printId(id: string | number) {
     console.log("ID is a number:", id.toFixed(2));
   }
 }
+
 ```
 
 ---
@@ -256,3 +257,7 @@ console.log(swap("frontend", 101)); // [101, "frontend"]
 * When two or more inputs have **different types**.
 * When you want to **return multiple values**.
 * When building **utility functions**, APIs, or **data transformation** logic.
+
+
+
+## What is the diff between argument and parameter 
