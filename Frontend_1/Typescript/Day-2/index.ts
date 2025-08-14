@@ -115,7 +115,7 @@ console.log(add(2,5));
 // const total=totalprice(product)
 // console.log(`TP= ${total}`)
 
-// 🔷 Example 2: Function Type for Logging
+// **🔷 Example 2: Function Type for Logging
 
 // type Logger = (message: string) => void;
 
@@ -203,3 +203,4 @@ const introduction=(student:Student):string=>{
 console.log(introduction (student));
 console.log(student.greet("India"));
 console.log(student2.greet("India"));
+
