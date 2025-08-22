@@ -74,3 +74,31 @@ So yes, it acts like setInterval() — but only because the page keeps reloading
 🔹 setTimeout() is not looping
 🔹 The page reload causes the code to start again
 🔹 That’s why it feels like setInterval()
+
+##  What is promise?
+
+*  "I Promise a Result!"
+
+**"Producing code" is code that can take some time**
+
+**"Consuming code" is code that must wait for the result**
+
+**A Promise is an Object that links Producing code and Consuming code**
+
+**A promise is a special JavaScript object that links the “producing code” and the “consuming code” together.** In terms of our analogy: this is the “subscription list”. The “producing code” takes whatever time it needs to produce the promised result, and the “promise” makes that result available to all of the subscribed code when it’s ready.
+
+
+### Promise Object Properties
+A JavaScript Promise object can be:
+
+1. Pending
+2. Fulfilled
+3. Rejected
+
+The Promise object supports two properties: state and result.
+
+1. While a Promise object is "pending" (working), the result is undefined.
+
+2. When a Promise object is "fulfilled", the result is a value.
+
+3. When a Promise object is "rejected", the result is an error object.
