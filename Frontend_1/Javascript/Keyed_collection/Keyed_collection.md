@@ -266,3 +266,13 @@ users.forEach((userInfo, userId) => {
 | `.keys()` | Get all keys | Iterator | `for(let k of m.keys())` |
 | `.values()` | Get all values | Iterator | `for(let v of m.values())` |
 | `.forEach()` | Iterate | undefined | `m.forEach((v,k) => {})` |
+
+
+## Key Differences:
+
+| Feature | Array `.map()` | Map Object |
+|---------|---------------|------------|
+| **What is it?** | Method that transforms arrays | Data structure for key-value pairs |
+| **Purpose** | Transform each array element | Store and retrieve key-value data |
+| **Syntax** | `array.map(callback)` | `new Map()` |
+| **Returns** | New transformed array | Map object |
