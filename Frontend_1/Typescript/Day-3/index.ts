@@ -24,7 +24,7 @@
 
 
 
-// FUNCTION 
+// **FUNCTION 
 
 // function greet(name:string,id:number){
 //   console.log(`Welcome ${name} your id : ${id}`);
@@ -46,7 +46,7 @@
 // const mygreet=greet("Megha",20)
 // console.log(mygreet)
 
-// we can also follow this way 
+// **we can also follow this way 
 const greet=(name:string,id:number):string=> `Welcome ${name} your id : ${id}`
 
 const mygreet=greet("Megha",20)

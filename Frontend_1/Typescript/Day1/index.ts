@@ -1,7 +1,7 @@
 let age:number=21;
 let F_name:string="Megha";
 let isActive: boolean=true;
-// let big: bigint = 9007199254740991n;
+// **let big: bigint = 9007199254740991n;
 let nothing: null = null;
 
 // let sym1: symbol = Symbol("id");
@@ -27,7 +27,7 @@ let id:number|string="1011"
 let role:"Megha"|"Bratati"|"Tanay"="Megha";
 
 enum Status{
-  PANDING,// enum sould  ALWAYS be  IN CAPITAL its better for programmer 
+  PANDING,// **enum sould  ALWAYS be  IN CAPITAL its better for programmer 
   SUCCESS,
   PROCESS,
   GO_AHEAD,

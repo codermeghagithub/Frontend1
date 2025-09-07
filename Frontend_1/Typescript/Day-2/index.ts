@@ -47,7 +47,7 @@ console.log(add(2,5));
 
 
 
-// // ✅ Valid Array Declarations in TypeScript:
+// **✅ Valid Array Declarations in TypeScript:
 
 // let arr1: number[] = [1, 2, 3];           // ✅ shorthand syntax
 // let arr2: Array<number> = [4, 5, 6];      // ✅ generic syntax
