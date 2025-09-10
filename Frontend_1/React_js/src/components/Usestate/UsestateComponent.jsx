@@ -14,12 +14,13 @@ const UsestateComponent = () => {
     
    }
   return (
+    // * without tailwind css 
     // <div>UsestateComponent
     // <h1>My age:{age}</h1>
     // <button onClick={increaseBy1}>Increse 1</button>
     // <button onClick={increaseBy3}>Increse 3</button>
     // </div>
-
+//
 
     <div className="bg-white text-black p-6 min-h-screen">
       <div className="max-w-md mx-auto">
