@@ -12,10 +12,10 @@ body{
 padding: 10px 16px;
 font-size: 1rem;
 font-weight: 500;
-background-color: #0d6efd;
+background-color: #fd4d0d;
 border-radius: 4px;
 border: 1px solid transparent;
-border-color: #0d6efd;
+border-color: #fd290d;
 
 }
 
@@ -27,4 +27,19 @@ background-color: #0d6efd;
 border-radius: 4px;
 border: 1px solid transparent;
 border-color: #0d6efd;
+}
+
+#set{
+  padding: 10px 16px;
+font-size: 1rem;
+font-weight: 500;
+background-color: #07749f;
+border-radius: 4px;
+border: 1px solid transparent;
+border-color: #07749f;
+}
+input{
+  width:5rem;
+  height: 2rem;
+  font-size: 1rem;
 }
