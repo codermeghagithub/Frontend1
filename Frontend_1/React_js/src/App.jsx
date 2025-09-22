@@ -2,6 +2,8 @@
 import React, {useEffect} from 'react'
  import UsestateComponent from "./components/Usestate/UsestateComponent"
 import UserefComponent from './components/UseRef/UserefComponent'
+// import UseMemoComponent from './components/UseMemo/UseMemoComponent'
+import UseCallBackComponent from './components/UseCallback/UseCallBackComponent'
 const App = () => {
  return (
      <>
@@ -11,7 +13,9 @@ const App = () => {
     {/* <UseRefComponent/> */}
     {/* <IndianGoverment/> */}
     {/* <UseLayOutComponent/>  */}
-    <UserefComponent/>
+    {/* <UserefComponent/> */}
+    {/* <UseMemoComponent/> */}
+    <UseCallBackComponent/>
  </>
    )
  }

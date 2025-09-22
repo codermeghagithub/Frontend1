@@ -4,12 +4,15 @@ const UserefComponent = () => {
   const [count,setCount]=React.useState(0);
 
   const  countref=useRef(0);
-
+  const btnRef=useRef();
   useEffect(()=>{
     countref.current=countref.current+1;
     console.log("Rendering App  Component",countref.current);
     
   })
+  const onChangeColor=()=>{
+    btnRef.current.style.backgroundColor="Blue"
+  }
   return (
     <div className='flex flex-col items-center justify-center h-screen bg-zinc-800 text-white'>
 <div className='flex flex-row items-center gap-4'>
@@ -24,6 +27,9 @@ onClick={()=>setCount(count-1)}
 className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'>
   - Remove
 </button>
+<button ref={btnRef} onClick={onChangeColor}
+className='bg-yellow-300 hover:bg-yellow-300 text-white-bold py-2 px-4 rounded'
+>changecolor</button>
 </div>
     </div>
   )
