@@ -1,0 +1,43 @@
+*{
+  box-sizing: border-box;
+}
+.guess{
+  font-size: 2em;
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+    text-align: center;
+
+}
+
+button{
+  padding:10px 16px;
+  background-color: cyan;
+  border:1px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#input{
+  margin-bottom:1rem;
+  font-size:1.5rem;
+  width:15rem;
+
+}
+/* .form-input{
+width: 100%;
+    padding: .75rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    
+} */
+
+.btn2{
+  cursor: not-allowed;
+
+}
