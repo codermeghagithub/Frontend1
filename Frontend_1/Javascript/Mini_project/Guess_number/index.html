@@ -8,25 +8,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script src="guess.js"></script>
+  
   <title>Document</title>
 </head>
 <body>
   <center> 
   <h1 class="guess">Guess The Number
 </h1>
-<div>
   <p>I'm thinking of a number between 0 and 100. Can you guess it?</p>
+  <p>You have 10 guesses remaining.</p>
   <form>
-    <input type="number" id=":input" class="form-input" placeholder="Enter a Number" autocomplete="off" min="0" max="100">
-  </form>
-  <button>
-Submit Guess
+    <input type="number" id="input" class="form-input" placeholder="Enter a Number" autocomplete="off" min="0" max="100">
+    <div> 
+<button>
+      Submit 
   </button>
   <button disabled class="btn2">
   New Game
   </button>
-</div>
+  </div>
+
+  </form>
+  <p class="result"></p>
+  <p>Your guesses:<span class="all-guess"></span></p>
+
   </center>
+  <script src="guess.js"></script>
 </body>
 </html>
