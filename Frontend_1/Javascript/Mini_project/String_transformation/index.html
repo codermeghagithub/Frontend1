@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String transformer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <center> <h1 class="h_first">String Transformers</h1></center>
+      <input
+        type="text"
+        id="userInput"
+        class="input-field"
+        placeholder="Enter the sentence With Spaces (alphanumeric)"
+        autocomplete="off"
+        value="this is a normal sentence to transform"
+      />
+      <p id="input">
+        Type any text to see it transformed in different formats below
+      </p>
+
+      <div class="full_div"role="region" aria-label="Transformation results"> 
+      <div class="all_div" id="lowercase" tabindex="0"aria-labelledby="Lower Case"></div>
+      <span id="lowercase" class="transformer-label">Lower Case</span>
+      <output id="lc" class="to" aria-live="polite" aria-label="lowercase: this is a normal sentence to transform">this is a normal sentence to transform</output>
+       <span></span>
+      
+    </div>
+
+     <div class="all_div" id="uppercase" tabindex="0"aria-labelledby="uppercase-label"></div>
+      <span id="uperrcase"class="transformer-label">Upper Case</span>
+      <output id="uc" class="to" aria-live="polite" aria-label="upperCase: this is a normal sentence to transform">THIS IS A NORMAL SENTENCE TO TRANSFORM</output>
+    </div>
+
+     <div class="all_div" id="camelcase" tabindex="0"aria-labelledby="Camel Case"></div>
+      <span id="camelcase"class="transformer-label"> Camel Case
+      </span>
+      <output id="cc" class="to" aria-live="polite" aria-label="camelcase: this is a normal sentence to transform">thisIsANormalSentenceToTransform</output>
+      
+    </div>
+
+    <div class="all_div" id="pascalcase" tabindex="0"aria-labelledby="pascalcase-label"></div>
+      <span id="pascalcase"class="transformer-label">Pascal Case</span>
+      <output id="pc" class="to" aria-live="polite" aria-label="pascalcase: this is a normal sentence to transform">ThisIsANormalSentenceToTransform</output>
+    </div>
+
+
+    <div class="all_div" id="snakecase" tabindex="0"aria-labelledby="uppercase-label"></div>
+      <span id="snakecase"class="transformer-label">Snake Case</span>
+      <output id="sc" class="to" aria-live="polite" aria-label="snakecase: this is a normal sentence to transform">this_is_a_normal_sentence_to_transform</output>
+    </div>
+
+
+    <div class="all_div" id="kebabcase" tabindex="0"aria-labelledby="kebabcase-label"></div>
+      <span id="kebabcase"class="transformer-label">Kebab Case</span>
+      <output id="kc" class="to" aria-live="polite" aria-label="kebabcase: this is a normal sentence to transform">this-is-a-normal-sentence-to-transform</output>
+    </div>
+
+    <div class="all_div" id="trimspaces" tabindex="0"aria-labelledby="trimspaces-label"></div>
+      <span id="trimspaces"class="transformer-label">Trim Spaces</span>
+      <output id="ts" class="to" aria-live="polite" aria-label="trimspaces: this is a normal sentence to transform">thisisanormalsentencetotransform</output>
+    </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
