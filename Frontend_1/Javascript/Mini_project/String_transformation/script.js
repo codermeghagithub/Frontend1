@@ -68,8 +68,6 @@ function updateTransformation(){
 
 }
 
-
-
 updateTransformation();
 // Listen for input changes
 input.addEventListener('input', updateTransformation);
