@@ -14,6 +14,8 @@ const Shop = async({params}:{params:{category?:Promise<string[]>}}) => {
 }
 
 
+
+
     </div>
 
   )
